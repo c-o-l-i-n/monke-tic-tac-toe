@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="apple-touch-icon" href="/assets/monke.png" />
+		<meta name="apple-mobile-web-app-title" content="monke game" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+		<meta property="og:title" content="🍌 monke tic-tac-toe" />
+		<meta property="og:description" content="🦧 vs 🐒 showdown" />
+		<meta property="og:image" content="/assets/monke.png" />
+
+		<link rel="stylesheet" href="style.css" />
+		<title>🍌 monke tic-tac-toe</title>
+	</head>
+	<body>
+		<div id="scoreboard">
+			<h2 class="score">
+				🦧 monke 1: <span id="player-1-score" class="score-number">X</span>
+			</h2>
+			<h2 class="score">
+				🐒 monke 2: <span id="player-2-score" class="score-number">X</span>
+			</h2>
+		</div>
+
+		<table id="board">
+			<tr>
+				<td class="cell">X</td>
+				<td class="cell vertical-borders">X</td>
+				<td class="cell">X</td>
+			</tr>
+			<tr>
+				<td class="cell horizontal-borders">X</td>
+				<td class="cell horizontal-borders vertical-borders">X</td>
+				<td class="cell horizontal-borders">X</td>
+			</tr>
+			<tr>
+				<td class="cell">X</td>
+				<td class="cell vertical-borders">X</td>
+				<td class="cell">X</td>
+			</tr>
+		</table>
+		<button id="clear-btn">🍌 &nbsp; Clear &nbsp; 🍌</button>
+
+		<script src="script.js"></script>
+	</body>
+</html>
