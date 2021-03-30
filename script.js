@@ -7,8 +7,8 @@ const gameState = Object.freeze({
 	player2Turn: 2,
 	gameOver: 3,
 })
-const winSound = new Audio('assets/monke.ogg')
-const placeMarkerSound = new Audio('assets/plop.ogg')
+const winSound = new Audio('assets/monke.mp3')
+const placeMarkerSound = new Audio('assets/plop.mp3')
 
 // variables
 let currentGameState
@@ -161,3 +161,6 @@ for (cell of cells) {
 setScore(player1ScoreElement, player1Score)
 setScore(player2ScoreElement, player2Score)
 setGameState(gameState.gameRestarting)
+
+// fixes audio in Safari (macOS and iOS)
+new (window.AudioContext || window.webkitAudioContext)()
