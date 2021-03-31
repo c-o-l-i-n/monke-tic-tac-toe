@@ -32,7 +32,8 @@ body {
 	vertical-align: middle;
 	font-size: 64px;
 	border-collapse: collapse;
-	margin-top: 32px;
+	margin: 32px 0 32px 0;
+	transition: 500ms;
 }
 
 #board .cell {
@@ -51,7 +52,7 @@ body {
 	border-bottom: 8px solid rgb(82, 45, 0);
 }
 
-#clear-btn {
+.btn {
 	-webkit-appearance: none;
 	background-color: yellow;
 	border: none;
@@ -59,7 +60,11 @@ body {
 	font-size: 18px;
 	font-family: inherit;
 	padding: 8px 32px 8px 32px;
-	margin-top: 32px;
+	margin-bottom: 16px;
+}
+
+#spin-btn {
+	background-color: darkorange;
 }
 
 @keyframes place-marker {
@@ -95,5 +100,15 @@ body {
 
 	100% {
 		transform: scale(1);
+	}
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0);
+	}
+
+	to {
+		transform: rotate(360deg);
 	}
 }

@@ -12,14 +12,17 @@ const placeMarkerSound = new Audio('assets/plop.mp3')
 
 // variables
 let currentGameState
+let boardIsSpinning = false
 let player1Score = 0
 let player2Score = 0
 
 // dom elements
 const player1ScoreElement = document.getElementById('player-1-score')
 const player2ScoreElement = document.getElementById('player-2-score')
+const gameBoard = document.getElementById('board')
 const cells = document.getElementsByClassName('cell')
 const clearButton = document.getElementById('clear-btn')
+const spinButton = document.getElementById('spin-btn')
 
 const clearBoard = () => {
 	for (cell of cells) {
@@ -136,6 +139,13 @@ const setGameState = (state) => {
 
 clearButton.addEventListener('click', () => {
 	setGameState(gameState.gameRestarting)
+})
+
+spinButton.addEventListener('click', () => {
+	gameBoard.style.animation = boardIsSpinning
+		? 'stop-spinning 500ms'
+		: 'spin 4s linear infinite'
+	boardIsSpinning = !boardIsSpinning
 })
 
 for (cell of cells) {
