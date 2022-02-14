@@ -5,4 +5,4 @@
 
 may the best monke win
 
-https://c-o-l-i-n.github.io/monke-tic-tac-toe/
+https://🦧🦧🦧.ml
